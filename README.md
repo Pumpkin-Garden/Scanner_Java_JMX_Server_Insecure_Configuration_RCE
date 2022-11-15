@@ -5,7 +5,7 @@ The task that this script solves is to automatically scan a large list of hosts 
 List of performed checks:
 - Access without authentication
 - Use of weak passwords
-- Deserialization attack capability (RCE)
+- ~~Deserialization attack capability (RCE)~~
 - Ability to read arbitrary files (Path Traversal)
 - Ability to load MBean-class (RCE)
 
@@ -14,7 +14,7 @@ List of performed checks:
 Список выполняемых проверок:
 - Доступ без аутентификации
 - Использование слабых паролей
-- Возможность атаки десериализации (RCE)
+- ~~Возможность атаки десериализации (RCE)~~
 - Возможность чтения произвольных файлов (Path Traversal)
 - Возможность загрузки MBean-класса (RCE)
 
@@ -24,8 +24,8 @@ List of performed checks:
 2. Before running the script start the stager server to deliver the MBean. ```./beanshooter.jar stager <IP> <Port> tonka```
 3. Change the Stager_* variables to the IP and Port values of your web server
 4. Add a list of hosts to scan through to the **hosts.txt** file. IP and Port must be separated by any characters
-5. Change the Beanshooter variable to the name and path of your jar file. I have everything in one directory, so I use ./beanshooter
-6. Change the user_file and password_file variables to the path to files with logins and passwords for easy brute force. Or download these files from here and place them in the bash directory.
+5. Change the Beanshooter variable to the name and path of your jar file. I have everything in one directory
+6. Change the user_file and password_file variables to the path to files with logins and passwords for brute force
 7. The result will be displayed in the terminal, as well as in the result_Java_JMX.txt file in a convenient format for importing into Excel
 
 ## 2. Как использовать
@@ -33,7 +33,11 @@ List of performed checks:
 2. Перед запуском скрипта поднимите сервер, который будет использоваться для загрузки MBean-класса. ```./beanshooter.jar stager <IP> <Port> tonka```
 3. Измените значения переменных Stager_* на IP и Port вашего поднятого сервера
 4. Добавьте список хостов для сканирования в файл **hosts.txt**. IP и Port могут быть разделены любым символом
-5. Измените переменную Beanshooter на название и путь до вашего jar-файла. У меня все лежит в одной директории, поэтому я использую ./beanshooter
-6. Измените переменные user_file и password_file на путь до файлов с логинами и паролями для легкого брутфорса. Или скачайте эти файлы отсюда и поместите в директорию с bash-файлом.
+5. Измените переменную Beanshooter на название и путь до вашего jar-файла. У меня все лежит в одной директории
+6. Измените переменные user_file и password_file на путь до файлов с логинами и паролями для брутфорса
 7. Результат будет выведен в терминал, а также в файл result_Java_JMX.txt в удобном формате для импорта в эксель
+
+## The result of the script execution | Результат выполнения скрипта
+
+![image](https://user-images.githubusercontent.com/74209689/201937273-4e242c0a-4478-45c8-9808-6dbe2872ab1f.png)
 
